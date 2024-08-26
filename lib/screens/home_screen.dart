@@ -1,5 +1,6 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:testflutter/screens/ticket_view.dart';
 import 'package:testflutter/utils/app_styles.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -41,6 +42,7 @@ class HomeScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: const Color(0xFFF4F6FD)),
+                  margin: const EdgeInsets.symmetric(vertical: 30),
                   padding:
                       const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
                   child: Row(
@@ -55,10 +57,30 @@ class HomeScreen extends StatelessWidget {
                       )
                     ],
                   ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Upcoming Flights",
+                      style: Styles.headLineStyle2,
+                    ),
+                    InkWell(
+                      onTap: () {
+                        print("You are tapped");
+                      },
+                      child: Text(
+                        "View all",
+                        style: Styles.textStyle
+                            .copyWith(color: Styles.primaryColor),
+                      ),
+                    )
+                  ],
                 )
               ],
             ),
-          )
+          ),
+          TicketView(),
         ],
       ),
     );
