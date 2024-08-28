@@ -1,26 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class AppLayout {
-  static getSize(BuildContext context) {
+  static Size getSize(BuildContext context) {
     return MediaQuery.of(context).size;
   }
 
-  static getScreenHeight() {
-    return Get.height;
+  static double getHeight(BuildContext context, double pixels) {
+    double screenHeight = getSize(context).height;
+    double x = screenHeight / pixels;
+    return screenHeight / x;
   }
 
-  static getScreenWidth() {
-    return Get.width;
-  }
-
-  static getHeight(double pixels) {
-    double x = getScreenHeight() / pixels; //844/200=>4.22
-    return getScreenHeight() / x;
-  }
-
-  static getWidth(double pixels) {
-    double x = getScreenWidth() / pixels;
-    return getScreenWidth() / x;
+  static double getWidth(BuildContext context, double pixels) {
+    double screenWidth = getSize(context).width;
+    double x = screenWidth / pixels;
+    return screenWidth / x;
   }
 }
