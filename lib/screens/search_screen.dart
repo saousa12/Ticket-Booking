@@ -29,9 +29,12 @@ class SearchScreen extends StatelessWidget {
           Container(
             margin: const EdgeInsets.only(top: 20),
           ),
-          const AppTicketTabs(
+          AppTicketTabs(
             firstTab: 'Airline Tickets',
             secondTab: 'Hotels',
+            onTabChanged: (isFirstTab) {
+              print("tab tab");
+            },
           ),
           Container(
             margin: const EdgeInsets.only(top: 25),

@@ -85,14 +85,14 @@ class TicketView extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        SizedBox(
-                          width: 100,
+                        Expanded(
                           child: Text(
                             ticket['from']['name'],
                             style: isColor == null
                                 ? Styles.headLineStyle4
                                     .copyWith(color: Colors.white, fontSize: 12)
                                 : Styles.headLineStyle4.copyWith(fontSize: 12),
+                            overflow: TextOverflow.ellipsis, // Handle overflow
                           ),
                         ),
                         Text(
@@ -101,9 +101,9 @@ class TicketView extends StatelessWidget {
                               ? Styles.headLineStyle4
                                   .copyWith(color: Colors.white)
                               : Styles.headLineStyle4,
+                          overflow: TextOverflow.ellipsis, // Handle overflow
                         ),
-                        SizedBox(
-                          width: 100,
+                        Expanded(
                           child: Text(
                             ticket['to']['name'],
                             textAlign: TextAlign.end,
@@ -111,6 +111,7 @@ class TicketView extends StatelessWidget {
                                 ? Styles.headLineStyle4
                                     .copyWith(color: Colors.white, fontSize: 12)
                                 : Styles.headLineStyle4.copyWith(fontSize: 12),
+                            overflow: TextOverflow.ellipsis, // Handle overflow
                           ),
                         ),
                       ],
