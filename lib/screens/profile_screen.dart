@@ -1,5 +1,6 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:testflutter/screens/new_screen.dart';
 import 'package:testflutter/utils/app_layout.dart';
 import 'package:testflutter/utils/app_styles.dart';
 import 'package:testflutter/widgets/column_layout.dart';
@@ -235,7 +236,7 @@ class ProfileScreen extends StatelessWidget {
                       style: Styles.headLineStyle4.copyWith(fontSize: 16),
                     ),
                     Text(
-                      "23 October 2024",
+                      "23 July 2024",
                       style: Styles.headLineStyle4.copyWith(fontSize: 16),
                     ),
                   ],
@@ -286,12 +287,19 @@ class ProfileScreen extends StatelessWidget {
                       isColor: false,
                     ),
                     AppColumnLayout(
-                      firstText: "McDonal\'s",
+                      firstText: "McDonal's",
                       secondText: "Received from",
                       alignment: CrossAxisAlignment.end,
                       isColor: false,
                     ),
                   ],
+                ),
+                Container(
+                  margin: const EdgeInsets.only(top: 10),
+                ),
+                const AppLayoutBuilderWidget(
+                  sections: 12,
+                  isColor: false,
                 ),
                 Container(
                   margin: const EdgeInsets.only(top: 10),
@@ -320,7 +328,9 @@ class ProfileScreen extends StatelessWidget {
             margin: const EdgeInsets.only(top: 25),
           ),
           InkWell(
-            onTap: () => print("You are tapped"),
+            onTap: () {
+              print("You are Tap");
+            },
             child: Center(
               child: Text(
                 "How to get more miles",

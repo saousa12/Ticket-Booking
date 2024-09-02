@@ -1,6 +1,7 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:testflutter/screens/home_screen.dart';
+import 'package:testflutter/screens/new_screen.dart';
 import 'package:testflutter/screens/profile_screen.dart';
 import 'package:testflutter/screens/search_screen.dart';
 import 'package:testflutter/screens/ticket_screen.dart';
@@ -20,6 +21,7 @@ class _BottomBarState extends State<BottomBar> {
     const SearchScreen(),
     const TicketScreen(),
     const ProfileScreen(),
+    const NewScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -27,7 +29,7 @@ class _BottomBarState extends State<BottomBar> {
       _selectedIndex = index;
       // print("Tapped index is " + _selectedIndex.toString());
 
-      // print("Tapped index is ${_selectedIndex}");
+      print("Tapped index is ${_selectedIndex}");
     });
   }
 
@@ -61,6 +63,10 @@ class _BottomBarState extends State<BottomBar> {
                 icon: Icon(FluentSystemIcons.ic_fluent_person_regular),
                 activeIcon: Icon(FluentSystemIcons.ic_fluent_person_filled),
                 label: "Profile"),
+            BottomNavigationBarItem(
+                icon: Icon(FluentSystemIcons.ic_fluent_star_regular),
+                activeIcon: Icon(FluentSystemIcons.ic_fluent_star_filled),
+                label: "new"),
           ]),
     );
   }

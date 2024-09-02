@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-// import 'package:testflutter/screens/ticket_view.dart';
-// import 'package:testflutter/utils/app_info_list.dart';
 import 'package:testflutter/utils/app_layout.dart';
 import 'package:testflutter/utils/app_styles.dart';
-// import 'package:testflutter/widgets/column_layout.dart';
-// import 'package:testflutter/widgets/layout_builder_widget.dart';
 import 'package:testflutter/widgets/ticker_recipt.dart';
 import 'package:testflutter/widgets/ticket_tabs.dart';
-// import 'package:barcode_widget/barcode_widget.dart';
 
 class TicketScreen extends StatefulWidget {
   const TicketScreen({super.key});

@@ -19,7 +19,7 @@ class AppIconText extends StatelessWidget {
             color: const Color(0xFF8FC2DF),
           ),
           Container(
-            margin: const EdgeInsets.symmetric(horizontal: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 10),
           ),
           Text(
             text,

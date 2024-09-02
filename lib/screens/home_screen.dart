@@ -17,7 +17,8 @@ class HomeScreen extends StatelessWidget {
       body: ListView(
         children: [
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            margin: const EdgeInsets.only(top: 40),
             child: Column(
               children: [
                 Row(
@@ -66,6 +67,9 @@ class HomeScreen extends StatelessWidget {
                     bigText: "Upcoming flights", smallText: "View all")
               ],
             ),
+          ),
+          Container(
+            margin: const EdgeInsets.symmetric(vertical: 10),
           ),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,

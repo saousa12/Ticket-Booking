@@ -54,7 +54,7 @@ class TicketView extends StatelessWidget {
                             children: [
                               const SizedBox(
                                   height: 24,
-                                  child: const AppLayoutBuilderWidget(
+                                  child: AppLayoutBuilderWidget(
                                     sections: 6,
                                   )),
                               Center(
@@ -119,6 +119,7 @@ class TicketView extends StatelessWidget {
                   ],
                 ),
               ),
+              // showing the orange part of ticket
               Container(
                 color: isColor == null
                     ? Styles.orangeColor
@@ -211,26 +212,6 @@ class TicketView extends StatelessWidget {
                           alignment: CrossAxisAlignment.center,
                           isColor: isColor,
                         ),
-                        // Column(
-                        //   crossAxisAlignment: CrossAxisAlignment.end,
-                        //   children: [
-                        //     Text(
-                        //       ticket['number'].toString(),
-                        //       style: isColor == null
-                        //           ? Styles.headLineStyle3
-                        //               .copyWith(color: Colors.white)
-                        //           : Styles.headLineStyle3,
-                        //     ),
-                        //     Text(
-                        //       'Number',
-                        //       style: isColor == null
-                        //           ? Styles.headLineStyle4.copyWith(
-                        //               color: Colors.white, fontSize: 12)
-                        //           : Styles.headLineStyle4
-                        //               .copyWith(fontSize: 12),
-                        //     ),
-                        //   ],
-                        // ),
                       ],
                     )
                   ],
